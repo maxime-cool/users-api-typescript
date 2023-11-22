@@ -1,0 +1,13 @@
+{
+    "db": {
+      "connectionString": "postgres://wzmcfgkk:pgi_SY5b3_SmC-sN3XSjWLzWeLoP_tAb@berry.db.elephantsql.com/wzmcfgkk"
+
+    },
+    "outDir": "./src",
+    "schemas": {
+      "public": {
+        "include": ["users"],
+        "exclude": []
+      }
+    }
+  }

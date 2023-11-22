@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  users-api:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+  db:
+    image: postgres:12.1-alpine
+    environment:
+      - PGUSER=wzmcfgkk
+      - PGPASSWORD=pgi_SY5b3_SmC-sN3XSjWLzWeLoP_tAb
+      - PGHOST=berry.db.elephantsql.com
+      - PGDATABASE=wzmcfgkk
+    ports:
+      - "5432:5432"

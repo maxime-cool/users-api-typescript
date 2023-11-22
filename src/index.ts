@@ -1,7 +1,10 @@
 import fastify from 'fastify'
 import userRouter from './routes/user.router'
 
+import 'dotenv/config'
+
 const port = 5000;
+const host = '0.0.0.0'
 
 const startServer = async () => {
     try {
@@ -13,7 +16,7 @@ const startServer = async () => {
 
         server.register(userRouter, { prefix : '/api/user'})
 
-        server.listen({ port }, errorHandler)
+        server.listen({host, port }, errorHandler)
     } catch (e) {
         console.error(e)
     }
